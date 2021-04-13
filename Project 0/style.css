@@ -30,16 +30,16 @@ li a:hover {
     text-decoration: underline;
 }
 
-header {
-    height: 10vh;
-}
 
 .search {
-    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 input[type="text"]:focus{
