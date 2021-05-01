@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8"
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8",
+    "python.linting.pylintArgs": ["--generate-members"],
+    "emmet.includeLanguages": {
+        "django-html": "html",
+   }
 }
+

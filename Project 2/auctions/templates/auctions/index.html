@@ -1,0 +1,29 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Advertenties</h2>
+
+    {% if empty %}
+
+        <h1>empty</h1>
+
+    {% else %}
+    <div class="container">
+
+        {% for product in products%}
+        <div class="card">
+            <img src="{{product.image_link}}" alt="">
+            <div class="card-info">
+                <div id="title" >{{product.title}}</div>
+                <div id="cat" >{{product.category}}</div>
+                <div id="sel" >Verkoper: <span id="seller" >{{product.seller}}</span></div>
+                <div id="desc" >{{product.description}}</div>
+                <div id="bid" >€{{product.starting_bid}},-</div>
+                <div id="date" >{{product.created_at}}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+{% endblock %}

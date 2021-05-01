@@ -1,0 +1,37 @@
+{% extends 'auctions/layout.html' %}
+
+{% block body %}
+
+    <h2>Plaats advertentie</h2>
+
+    <div class="form-box">
+        <form class="form" action="{% url 'create' %}" method="POST">
+
+            {% csrf_token %}
+            <div class="half form-left">
+            <input class="form-create form-control" autofocus type="text" name="title" placeholder="Titel">
+
+            <textarea class="form-create form-control" name="description" rows="5" placeholder="Beschrijving"></textarea>
+            </div>
+
+            <div class="half form-right">
+                <select class="form-create form-control" name="category" placeholder="Categorie" required>
+                    <option value="">Kies categorie</option>
+                    <option value="kleding">Kleding</option>
+                    <option value="auto's">Auto's</option>
+                    <option value="elektronische apparaten">Elektronische apparaten</option>
+                    <option value="boeken">Boeken</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="overige">Overige</option>
+                </select>
+
+                <input class="form-create form-control" type="text" name="starting_bid" placeholder="Openingsbod">
+
+                <input class="form-create form-control" type="text" name="image_link" placeholder="Afbeelding link (Optioneel)">
+
+                <input class="form-button btn btn-primary" type="submit" value="Plaats">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
